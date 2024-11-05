@@ -8,7 +8,7 @@ import {toast} from 'react-toastify';
 
 export default function RegisterEmployee(){
     const {mutate: mutateCreateEmployee} = useMutation({
-        mutationFn: async({firstName, lastName, email, salary, role, shiftsId}: any) => {
+        mutationFn: async({firstName, lastName, email, salary, role, shiftsId}: {firstName: string, lastName: string, email: string, salary: string, role: string, shiftsId: string}) => {
             return await instance.post('/hr/create-user', {
                 firstName, 
                 lastName, 

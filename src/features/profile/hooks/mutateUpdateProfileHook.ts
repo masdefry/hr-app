@@ -1,8 +1,8 @@
-import { mutateUpdateProfileApi } from '../api/mutateUpdateProfileApi'
+import { useMutateUpdateProfileApi } from '../api/useMutateUpdateProfileApi'
 import {toast} from 'react-toastify';
 
 export const mutateUpdateProfileHook = () => {
-    const {mutateUpdateProfile} = mutateUpdateProfileApi({
+    const {mutateUpdateProfile} = useMutateUpdateProfileApi({
         onSuccess: () => {
             toast.success('Update Profile Success')
         },

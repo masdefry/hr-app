@@ -7,7 +7,7 @@ interface IMutateUpdateProfileApi{
     onError: (err: any) => void
 }
 
-export const mutateUpdateProfileApi = ({onSuccess, onError}: IMutateUpdateProfileApi) => {
+export const useMutateUpdateProfileApi = ({onSuccess, onError}: IMutateUpdateProfileApi) => {
     const {mutate: mutateUpdateProfile} = useMutation({
         mutationFn: async(fd) => {
             return await instance.put('/users', fd)

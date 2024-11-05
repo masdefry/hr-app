@@ -7,7 +7,7 @@ interface IMutateCreateProfileApi{
     onError: (err: any) => void
 }
 
-export const mutateCreateProfileApi = ({onSuccess, onError}: IMutateCreateProfileApi) => {
+export const useMutateCreateProfileApi = ({onSuccess, onError}: IMutateCreateProfileApi) => {
     const {mutate: mutateCreateProfile} = useMutation({
         mutationFn: async(fd: FormData) => {
             return await instance.post('/users', fd)
