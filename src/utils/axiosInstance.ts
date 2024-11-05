@@ -1,6 +1,5 @@
 import axios from 'axios';
-import authStore from '@/zustand/authStore'
-import {useRouter} from 'next/navigation';
+import authStore from '@/zustand/authStore';
 import {toast} from 'react-toastify'
 
 const instance = axios.create({

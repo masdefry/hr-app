@@ -19,11 +19,11 @@ export default function ResetPasswordPage({params}: any){
             })
         }, 
 
-        onSuccess: (res) => {
+        onSuccess: () => {
             toast.success('Reset Password Success')
         },
 
-        onError: (err) => {
+        onError: () => {
             toast.error('Link Sudah Tidak Berlaku')
         }
     })

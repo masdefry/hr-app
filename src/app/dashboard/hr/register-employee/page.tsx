@@ -19,13 +19,12 @@ export default function RegisterEmployee(){
             })
         },
 
-        onSuccess: (res) => {
+        onSuccess: () => {
             toast.success('Register Employee Success')
         },
 
-        onError: (err) => {
+        onError: () => {
             console.log('onError')
-            console.log(err)
         }
     })
 
@@ -43,7 +42,7 @@ export default function RegisterEmployee(){
                         shiftsId: ''
                     }}
                     validationSchema={registerEmployeeSchema}
-                    onSubmit={(values, {resetForm}) => {
+                    onSubmit={(values) => {
                         mutateCreateEmployee({
                             firstName: values.firstName, 
                             lastName: values.lastName, 

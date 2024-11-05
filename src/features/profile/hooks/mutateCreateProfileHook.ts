@@ -3,11 +3,11 @@ import {toast} from 'react-toastify';
 
 export const mutateCreateProfileHook = () => {
     const {mutateCreateProfile} = mutateCreateProfileApi({
-        onSuccess: (res) => {
+        onSuccess: () => {
             toast.success('Create Profile Success')
         }, 
 
-        onError: (err) => {
+        onError: () => {
             toast.error('Failed')
         }
     })

@@ -3,7 +3,6 @@ import {ReactNode, useEffect, useState} from 'react';
 import instance from '@/utils/axiosInstance'
 import authStore from '@/zustand/authStore'
 import { usePathname, useRouter } from 'next/navigation'
-import {toast} from 'react-toastify'
 
 interface IAuthProviderProps {
     children: ReactNode;
