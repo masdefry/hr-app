@@ -1,6 +1,8 @@
 import BottomNavigation from '@/components/BottomNavigation';
 
-export default function DashboardLayout({children}){
+export default function DashboardLayout({children}: Readonly<{
+    children: React.ReactNode;
+}>){
     return(
         <main>
             {children}
