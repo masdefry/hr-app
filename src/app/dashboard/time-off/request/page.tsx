@@ -1,5 +1,5 @@
 'use client';
-import { Form, Formik } from 'formik';
+// import { Form, Formik } from 'formik';
 import HeaderTitle from '@/components/HeaderTitle'
 
 export default function RequestTimeOffPage(){
@@ -7,8 +7,8 @@ export default function RequestTimeOffPage(){
         <main>
             <HeaderTitle title='Request Time Off' />
             <section className='p-10'>
-                <Formik>
-                    <Form className='flex flex-col gap-5'>
+                {/* <Formik> */}
+                    <section className='flex flex-col gap-5'>
                         <label className='form-control w-full'>
                             <div className='label'>
                                 <span className='label-text flex items-center gap-3'>Time Off Type</span>
@@ -37,8 +37,8 @@ export default function RequestTimeOffPage(){
                         <button className='btn bg-blue-600 text-white'>
                             Submit
                         </button>
-                    </Form>
-                </Formik>
+                    </section>
+                {/* </Formik> */}
             </section>
         </main>
     )
