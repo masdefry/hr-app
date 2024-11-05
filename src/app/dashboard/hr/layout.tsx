@@ -3,7 +3,9 @@ import authStore from '@/zustand/authStore';
 import {useRouter} from 'next/navigation';
 import {useState, useEffect} from 'react';
 
-export default function Free({children}){
+export default function Free({children}: Readonly<{
+    children: React.ReactNode;
+}>){
     const [isLoading, setIsLoading] = useState(true)
 
     const router = useRouter()

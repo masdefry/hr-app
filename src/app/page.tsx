@@ -54,7 +54,6 @@ export default function HomePage() {
           }}
           validationSchema={authSchema}
           onSubmit={(values) => {
-            console.log('>>>')
             mutateAuthLogin({email: values.email, password: values.password})
           }}
         >
