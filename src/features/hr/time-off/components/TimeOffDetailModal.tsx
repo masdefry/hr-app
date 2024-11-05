@@ -1,7 +1,15 @@
 export default function TimeOffDetailModal(){
+
+    const handleShowModal = () => {
+        const modal = document.getElementById('my_modal_1') as HTMLDialogElement | null;
+        if (modal) {
+            modal.showModal();
+        }
+    };
+
     return(
         <>
-            <button className='btn w-full' onClick={()=>document.getElementById('my_modal_1').showModal()}>View</button>
+            <button className='btn w-full' onClick={handleShowModal}>View</button>
             <dialog id='my_modal_1' className='modal'>
                 <div className='modal-box'>
                     <h3 className='font-bold text-lg'>Time Off Reason</h3>
