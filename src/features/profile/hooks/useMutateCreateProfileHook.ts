@@ -1,7 +1,7 @@
 import { useMutateCreateProfileApi } from '../api/useMutateCreateProfileApi'
 import {toast} from 'react-toastify';
 
-export const mutateCreateProfileHook = () => {
+export const useMutateCreateProfileHook = () => {
     const {mutateCreateProfile} = useMutateCreateProfileApi({
         onSuccess: () => {
             toast.success('Create Profile Success')

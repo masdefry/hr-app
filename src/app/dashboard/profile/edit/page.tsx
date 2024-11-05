@@ -1,12 +1,12 @@
 'use client';
-import {queryGetProfileHook} from '@/features/profile/hooks/queryGetProfileHook'
+import {useQueryGetProfileHook} from '@/features/profile/hooks/useQueryGetProfileHook'
 import FormProfile from '@/features/profile/components/FormProfile'
-import { mutateUpdateProfileHook } from './../../../../features/profile/hooks/mutateUpdateProfileHook';
+import { useMutateUpdateProfileHook } from '../../../../features/profile/hooks/useMutateUpdateProfileHook';
 
 export default function EditProfilePage(){
 
-    const {dataUserProfile} = queryGetProfileHook()
-    const {mutateUpdateProfile} = mutateUpdateProfileHook()
+    const {dataUserProfile} = useQueryGetProfileHook()
+    const {mutateUpdateProfile} = useMutateUpdateProfileHook()
 
     if(!dataUserProfile?.birthDate && !dataUserProfile?.address && !dataUserProfile?.phoneNumber) return(
         <></>
@@ -19,7 +19,7 @@ export default function EditProfilePage(){
                 address={dataUserProfile?.address}
                 phoneNumber={dataUserProfile?.phoneNumber}
                 isEdit={true}
-                mutateUpdateProfile={mutateUpdateProfile}
+                mutateUpdateProfile={useMutateUpdateProfileHook}
             />
         </main>
     )

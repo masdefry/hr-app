@@ -3,13 +3,13 @@ import HeaderTitle from '@/components/HeaderTitle'
 import DisplayProfile from '@/features/profile/components/DisplayProfile';
 import FormProfile from '@/features/profile/components/FormProfile';
 
-import {queryGetProfileHook} from '@/features/profile/hooks/queryGetProfileHook';
-import { mutateCreateProfileHook } from '@/features/profile/hooks/mutateCreateProfileHook';
+import {useQueryGetProfileHook} from '@/features/profile/hooks/useQueryGetProfileHook';
+import { useMutateCreateProfileHook } from '@/features/profile/hooks/useMutateCreateProfileHook';
 
 export default function ProfilePage(){
 
-    const {dataUserProfile} = queryGetProfileHook()
-    const {mutateCreateProfile} = mutateCreateProfileHook()
+    const {dataUserProfile} = useQueryGetProfileHook()
+    const {mutateCreateProfile} = useMutateCreateProfileHook()
 
     return(
         <main>
