@@ -19,7 +19,7 @@ export default function EditProfilePage(){
                 address={dataUserProfile?.address}
                 phoneNumber={dataUserProfile?.phoneNumber}
                 isEdit={true}
-                mutateUpdateProfile={useMutateUpdateProfileHook}
+                mutateUpdateProfile={mutateUpdateProfile}
             />
         </main>
     )

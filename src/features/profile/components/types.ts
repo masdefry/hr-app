@@ -1,3 +1,6 @@
+import { UseMutateFunction } from '@tanstack/react-query';
+import { AxiosResponse } from 'axios';
+
 export interface IDisplayProfileProps{
     birthDate: string, 
     phoneNumber: string, 
@@ -6,7 +9,7 @@ export interface IDisplayProfileProps{
 }
 
 export interface IFormProfile extends Partial<Pick<IDisplayProfileProps, 'birthDate' | 'phoneNumber' | 'address'>>{
-    mutateCreateProfile?: (fd: FormData) => void;
-    mutateUpdateProfile?: (fd: FormData) => void;
+    mutateCreateProfile?: UseMutateFunction<AxiosResponse, any, FormData, unknown>;
+    mutateUpdateProfile?: UseMutateFunction<AxiosResponse, any, FormData, unknown>;
     isEdit?: boolean
 }
