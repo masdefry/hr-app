@@ -33,7 +33,7 @@ export default function HomePage() {
       router.push('/dashboard')
     },
 
-    onError: (err) => {
+    onError: (err: any) => {
       toast.error(err?.response?.data?.message)
     }
   })
